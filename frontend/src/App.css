@@ -1,0 +1,415 @@
+.centered-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+#para,#nothing{
+  margin-top: 1rem;
+}
+#nothing{
+  display: flex;
+  justify-content: center;
+}
+/* Header CSS */
+a{
+  text-decoration: none;
+  color: black;
+}
+.navbar{
+  border-bottom: 1px solid black;
+}
+
+.subnav{
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5rem;
+  font-size: x-large;
+}
+
+.logo{
+  height: inherit;
+  cursor: pointer;
+ }
+
+ .links{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+ }
+
+ .link{
+  margin-right: 1rem;
+ }
+
+@media screen and (max-width: 728px) {
+  .subnav{
+    height: 2rem;
+    max-width: 90%;
+  }
+  .link{
+    font-size: 0.5em;
+  }
+  .myblogs-title{
+    font-size: 2em!important;
+  }
+}
+
+
+
+ /* Blog CSS  */
+
+.blog{
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem ;
+  height: 25vw;
+  margin-top: 2rem;
+}
+
+.blogimage {
+  height: auto;
+  box-sizing: border-box;
+  max-width: 90%;
+}
+
+.title{
+  font-size: 4vw;
+}
+.author{
+  font-size: 1.2vw;
+  color: #888;
+}
+.content{
+  font-size: 2vw;
+}
+.textcomp{
+  margin-bottom: 4px;
+}
+
+/* Login And Delete mixed CSS */
+.container{
+  width: 100vw;
+}
+
+.login {
+  width: 70%; /* Change the width to a percentage to make it responsive */
+  max-width: 400px; /* Limit the maximum width for readability */
+  margin: 2.3rem auto 0;
+  padding: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.formtitle {
+  text-align: center; /* Center the title */
+}
+
+.formfield {
+  margin-top: 1.2rem;
+}
+
+.btn {
+  padding: 10px;
+  margin-top: 1.5rem;
+  /* font-size: 1rem;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer; */
+}
+
+#username,
+#password {
+  width: 100%; /* Make the input fields take 100% of available width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  outline: none;
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+
+/* Basic styling for the success message box */
+.success-message,.unauth-message {
+  background-color: #4CAF50; 
+  color: white; 
+  padding: 10px 20px; 
+  text-align: center; 
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 9999; 
+  display: none;
+}
+
+/* Animation for the message box (optional) */
+.success-message.show,.unauth-message.show {
+  display: block; /* Show the message box */
+  animation: slideDown 1s ease-in-out forwards; /* Slide down animation */
+}
+
+@keyframes slideDown {
+  0% {
+      transform: translateY(-100%);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Logout button */
+.logoutbtn{
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+/* NewBlog CSS */
+.newblog{
+  font-size: x-large;
+  max-width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 2px solid #ccc; /* Add a border for visual separation */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 10 10px 6px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+  background-color: #fff; /* Background color for the div */
+}
+
+.newblogtitle{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.blogformfield{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.2rem auto;
+}
+
+.blogformfield div{
+  margin-bottom: 1rem;
+}
+
+#description{
+  height: 20rem;
+}
+#title{
+  height: 2rem;
+}
+.createblogbtn{
+  width: 100%;
+  background-color: #007BFF; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 15px; 
+  cursor: pointer; 
+  font-size: 16px; 
+}
+/* myBLogs CSS */
+.blogs{
+  margin-bottom: 16vh;
+}
+.myblogs-title{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+.myblogsbtn_del{
+  background-color: red;
+}
+.myblogsbtn{
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 2vw;
+  /* height: 2vw; */
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust button size and font size for smaller screens */
+  .myblogsbtn {
+    padding: 8px 16px;
+    font-size: 9px;
+  }
+  .newblogtitle{
+    font-size: 7vw;
+  }
+}
+.myblogsbtn_green{
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+
+
+
+/* blogpage CSS */
+
+.blogpagetitle{
+  font-size: 4vw;
+}
+
+.blogpagecont{
+  max-width: 70%;
+  margin: 1rem auto;
+}
+
+.blogauth{
+  font-size: 1.6vw;
+  color: #888;
+}
+
+.blogpagefield{
+  padding-top: 1rem;
+}
+
+.singleblogimage{ 
+  width: 100%;
+}
+
+.blogcontent{
+  text-align: left;
+  line-height: 1.6;
+  font-size: 2vw;
+  word-spacing: 4px;
+  white-space: pre-line;
+}
+@media screen and (max-width: 768px) {
+  .blogauth{
+    font-size: 3vw;
+  }
+  .blogcontent{
+    font-size: 3vw;
+  }
+  .blogpagetitle{
+    font-size: 4.6vw;
+  }
+}
+
+
+
+/* UpdatBlog CSS */
+
+
+.selectblog{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+  font-size: 1rem;
+}
+.mandetory{
+  color: red;
+  
+}
+.selectblog div{
+  font-size: 2em;
+}
+.selectoption{
+  width: 20vw;
+}
+
+@media screen and (max-width: 768px) {
+  .selectblog{
+    font-size: 0.7rem;
+  }
+  .selectblog select{
+    font-size: 0.6rem;
+  }
+  
+}
+
+/* delblog CSS */
+.delcontainer{
+  display: flex;
+  margin: 2rem auto;
+  max-width: 60%;
+  height: 10vw;
+}
+
+
+
+.delbtn{
+  background-color: red;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px; 
+}
+
+.item {
+  padding: 2px;
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.item-full {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    font-size: 1.8vw;
+  }
+}
+
+
+/* Delete Blog CSS */
+
+.delselect{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.delete{
+  width: 70%; 
+  max-width: 400px; 
+  margin: 2.3rem auto 0;
+  padding: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.selectblogdel{
+  max-width: 10vw;
+  margin-top: 1rem;
+}
+.deletetitle{
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .selectblogdel{
+    max-width: 20vw;
+  }
+}
