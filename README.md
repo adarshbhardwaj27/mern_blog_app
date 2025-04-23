@@ -1,5 +1,6 @@
 # mern_blog_app
 MERN (MongoDB, Express.js, React, Node.js) stack blog application
+LIVE LINK -> https://mernstack-blog-adarsh-a7a45ef8836d.herokuapp.com/login
 
 Blogify - MERN Stack Blog Web App
 
